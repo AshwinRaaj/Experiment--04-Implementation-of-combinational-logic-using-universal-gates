@@ -27,17 +27,42 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
 ## Logic Diagram
-## Procedure
-## Program:
-/*
-Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-## RTL realization
+![output](ss1.png)
+## Procedure:
+### Step-1:
+Install quartus and its components.
 
+### Step-2:
+Create a new project and enter the required code in verilog HDL file.
+
+### Step-3:
+Compile the program and view the rtl file for logic diagram.
+
+### Step-4:
+Get the timing diagram for different inputs using VWF file.
+
+## Program:
+```
+Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
+Developed by: Ashwin Raaj.S
+RegisterNumber: 212221230008
+```
+```
+module cc_1(a,b,c,f);
+input a,b,c;
+output f;
+wire p,q,r;
+assign p=(~a & b & c);
+assign q=(a & ~b & c);
+assign r=(a & b & ~c);
+assign f=((p |q|r)); 
+endmodule
+```
+## RTL realization
 ## Output:
 ## RTL
+![output](ss2.png)
 ## Timing Diagram
+![output](ss3.png)
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
